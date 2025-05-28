@@ -13,9 +13,6 @@ import { getCategories } from './services/FormServices';
 function App() {
   const form = useSelector((state: RootState) => state.form) as Submission;
   const dispatch = useDispatch();
-  const [submissions, setSubmissions] = React.useState<Submission[]>([]);
-  const [error, setError] = React.useState<string>('');
-  const [success, setSuccess] = React.useState<string>('');
 
   const fetchCategories = () => {
     dispatch(fetchCategoriesStart());
@@ -51,8 +48,6 @@ function App() {
       <form className="p-3 card">
         {renderStep()}
       </form>
-      {error && <div className="alert alert-danger mt-3">{error}</div>}
-      {success && <div className="alert alert-success mt-3">{success}</div>}
     </div>
   );
 }

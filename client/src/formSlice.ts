@@ -16,7 +16,6 @@ export interface Submission {
   email: string;
   category?: string;
   difficulty?: string;
-  error?: string;
   questions?: Question[];
 }
 
@@ -27,7 +26,6 @@ const initialState: Submission = {
   category: '',
   difficulty: '',
   questions: [],
-  error: ''
 };
 
 const formSlice = createSlice({
@@ -51,9 +49,6 @@ const formSlice = createSlice({
       if (state.step > 1) {
         state.step -= 1;
       }
-    },
-    setFormError: (state, action: PayloadAction<string>) => {
-      state.error = action.payload;
     },
     setQuestions: (state, action: PayloadAction<Question[]>) => {
       state.questions = action.payload;
@@ -79,7 +74,6 @@ export const {
   restart,
   nextStep,
   previousStep,
-  setFormError,
   setQuestions,
   setAnswer } = formSlice.actions;
 export default formSlice.reducer;
