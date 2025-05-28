@@ -102,4 +102,4 @@ yarn test
 - Bootstrap (for styling)
 
 ## License
-This project is for demonstration purposes. Add your license here if needed.
+This project is for demonstration purposes.
