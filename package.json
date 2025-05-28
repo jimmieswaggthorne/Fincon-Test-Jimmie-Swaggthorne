@@ -13,6 +13,7 @@
     "test": "npm test --workspace=client"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+    "@types/react": "^19.1.6"
   }
 }
